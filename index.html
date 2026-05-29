@@ -19,14 +19,6 @@
   <link rel="stylesheet" href="css/daynight.css">
   <link rel="stylesheet" href="css/walker.css">
 </head>
-<div class="walker" id="walker">
-  <div class="walker-char">
-    <div class="w-comb"></div>
-    <div class="w-head"></div>
-    <div class="w-body"></div>
-    <div class="w-legs"></div>
-  </div>
-</div>
 <body>
 
   <div class="sky"></div>
@@ -53,10 +45,12 @@
     <a href="#education">EDUCATION</a>
     <a href="#jobs">JOBS</a>
     <a href="#toolbox">SKILLS</a>
+    <a href="#gallery">GALLERY</a>
     <a href="#contact">CONTACT</a>
     <a href="#resume" class="nav-resume">📄 RESUME</a>
     <button class="day-night-toggle" id="dayNightToggle" title="Toggle dark mode">🌙 DARK MODE</button>
   </nav>
+
   <section class="hero" id="home">
     <div class="hero-card">
       <div class="character">
@@ -80,8 +74,8 @@
     <div class="container">
 
       <section class="wood" id="about">
-        <div class="section-heading"><div class="ico">🌿</div>ABOUT ME</div>
-        <div class="about-grid">
+        <div class="section-heading"><div class="ico">🌿</div> ABOUT ME</div>
+        <div style="display: flex; gap: 24px; align-items: center; justify-content: space-between; width: 100%;">
 
           <div class="player-card">
             <div class="item-frame">
@@ -98,27 +92,30 @@
             </div>
           </div>
 
-          <div>
-            <div style="display: flex; gap: 24px; align-items: flex-start;">
-              <p class="about-text">
-                Hi, I'm Subat! I like building things that solve problems.
-                I'm 22 years old, and I've recently graduated with a degree in Computer Science. I love working on all kinds of projects and trying my absolute best into what I put out.
-                <br><br>
-                Outside of coding, I love gaming, watching anime, traveling, and crocheting.
-              </p>
-
-              <div class="item-frame-gallery">
-                <div class="frame-inner-gallery">
-                  <img class="gallery-slide active" src="graduation.jpg" alt="Graduation">
-                  <img class="gallery-slide" src="honors.png" alt="SJU Honors Ceremony">
-                  <img class="gallery-slide" src="bahamas.jpg" alt="Traveling">
-                  <img class="gallery-slide" src="gaming.png" alt="Gaming">
-                </div>
-                <div class="frame-peg"></div>
-                <div class="frame-caption" id="gallery-cap">Graduation</div>
-                <div class="gallery-dots" id="gallery-dots"></div>
+          <div class="about-side">
+            <div class="sp-wrap">
+              <span class="about-sparkle" style="top:-10px;left:5px;animation-delay:0s">✦</span>
+              <span class="about-sparkle" style="top:5px;right:-8px;animation-delay:0.6s">✦</span>
+              <span class="about-sparkle" style="bottom:-5px;left:0px;animation-delay:1.1s">✦</span>
+              <div class="heart-float">
+                <div style="display:flex"><div class="px h-empty"></div><div class="px h-pink"></div><div class="px h-empty"></div><div class="px h-pink"></div><div class="px h-empty"></div></div>
+                <div style="display:flex"><div class="px h-pink"></div><div class="px h-red"></div><div class="px h-pink"></div><div class="px h-red"></div><div class="px h-pink"></div></div>
+                <div style="display:flex"><div class="px h-pink"></div><div class="px h-red"></div><div class="px h-red"></div><div class="px h-red"></div><div class="px h-pink"></div></div>
+                <div style="display:flex"><div class="px h-empty"></div><div class="px h-pink"></div><div class="px h-red"></div><div class="px h-pink"></div><div class="px h-empty"></div></div>
+                <div style="display:flex"><div class="px h-empty"></div><div class="px h-empty"></div><div class="px h-pink"></div><div class="px h-empty"></div><div class="px h-empty"></div></div>
               </div>
             </div>
+          </div>
+
+          <div class="about-text-card">
+            <div class="bl"></div>
+            <div class="br"></div>
+            <p class="about-text">
+              Hi, I'm Subat! I like building things that solve problems.
+              I'm 22 years old, and I've recently graduated with a degree in Computer Science. I love working on all kinds of projects and trying my absolute best into what I put out.
+              <br><br>
+              Outside of coding, I love gaming, watching anime, traveling, and crocheting.
+            </p>
           </div>
 
         </div>
@@ -134,8 +131,8 @@
               <span class="project-emoji">🎮</span>
               <div class="project-title">Deadlock Drop</div>
               <div class="project-desc">
-                Full-stack web app for the Deadlock gaming community. 
-                <li> Players submit feature requests, vote on what they care about, and watch ideas move through a kanban roadmap from concept to actually added.
+                Full-stack web app for the Deadlock gaming community.
+                <li>Players submit feature requests, vote on what they care about, and watch ideas move through a kanban roadmap from concept to actually added.
               </div>
               <div class="tags">
                 <span class="tag n">Flask</span>
@@ -174,8 +171,7 @@
             <span class="project-emoji">📋</span>
             <div class="project-title">Tutoring Board</div>
             <div class="project-desc">
-              <li>Jira-inspired kanban board for managing tutoring work, sessions, follow-ups,
-              admin tasks all in one place.
+              <li>Jira-inspired kanban board for managing tutoring work, sessions, follow-ups, admin tasks all in one place.
               <li>Drag and drop, priority filters, search, due dates with overdue indicators, dark mode, and confetti when you finish something!
             </div>
             <div class="tags">
@@ -202,7 +198,7 @@
           </a>
 
           <div class="project-wrap">
-            <a class="project" href="https://github.com/rodoshe/portfolio" target="_blank" data-burst>
+            <a class="project" href="https://github.com/rodoshe/rodoshe.com" target="_blank" data-burst>
               <span class="project-arrow">↗</span>
               <span class="project-emoji">🌸</span>
               <div class="project-title">This Website</div>
@@ -227,7 +223,7 @@
           <div class="tl-item">
             <div class="tl-title">B.S. Computer Science</div>
             <div class="tl-sub">🏛️ St. John's University</div>
-            <div class="tl-date">2022 - 2026</div>
+            <div class="tl-date">2022 – 2026</div>
             <div class="tl-body">Graduated with honors!</div>
             <div class="tags" style="margin-top:10px">
               <span class="tag n">Dean's List</span>
@@ -408,38 +404,53 @@
           </div>
           <br>
           <a class="btn-download" href="subat-rodoshe-resume.pdf" download data-burst>⬇ Download Resume</a>
-          <div class="resume-hint">hover the chest for a surpise :)</div>
+          <div class="resume-hint">hover the chest for a surprise :)</div>
+        </div>
+      </section>
+
+      <section class="wood" id="gallery">
+        <div class="section-heading"><div class="ico">📸</div> GALLERY</div>
+        <div class="item-frame-gallery">
+          <div class="frame-inner-gallery">
+            <img class="gallery-slide active" src="graduation.jpg" alt="Graduation">
+            <img class="gallery-slide" src="honors.png" alt="SJU Honors Ceremony">
+            <img class="gallery-slide" src="bahamas.jpg" alt="Traveling">
+            <img class="gallery-slide" src="gaming.png" alt="Gaming">
+          </div>
+          <div class="frame-peg"></div>
+          <div class="frame-caption" id="gallery-cap">Graduation</div>
+          <div class="gallery-dots" id="gallery-dots"></div>
         </div>
       </section>
 
       <section class="dark" id="contact">
         <div class="section-heading"><div class="ico">📬</div> CONTACT</div>
-        <p style="font-family:'VT323',monospace;font-size:22px;color:rgba(255, 255, 255, 0.915);text-align:center;margin-bottom:22px;line-height:1.6">
+        <p style="font-family:'VT323',monospace;font-size:22px;color:rgba(255,255,255,0.915);text-align:center;margin-bottom:22px;line-height:1.6">
           Let's connect! Feel free to reach out about projects, opportunities, or just to chat.
         </p>
-<div class="contact-links">
-  <a class="contact-link email" href="mailto:subat0412@email.com">
-    <span>📧</span>
-    <div>
-      Email
-      <div class="contact-sub">subat0412@email.com</div>
-    </div>
-  </a>
-  <a class="contact-link github" href="https://github.com/rodoshe" target="_blank">
-    <span>🐙</span>
-    <div>
-      GitHub
-      <div class="contact-sub">See my projects</div>
-    </div>
-  </a>
-  <a class="contact-link linkedin" href="https://linkedin.com/in/subatrodoshe" target="_blank">
-    <span>💼</span>
-    <div>
-      LinkedIn
-      <div class="contact-sub">Connect with me</div>
-    </div>
-  </a>
-</div>
+        <div class="contact-links">
+          <a class="contact-link email" href="mailto:subat0412@email.com">
+            <span>📧</span>
+            <div>
+              Email
+              <div class="contact-sub">subat0412@email.com</div>
+            </div>
+          </a>
+          <a class="contact-link github" href="https://github.com/rodoshe" target="_blank">
+            <span>🐙</span>
+            <div>
+              GitHub
+              <div class="contact-sub">See my projects</div>
+            </div>
+          </a>
+          <a class="contact-link linkedin" href="https://linkedin.com/in/subatrodoshe" target="_blank">
+            <span>💼</span>
+            <div>
+              LinkedIn
+              <div class="contact-sub">Connect with me</div>
+            </div>
+          </a>
+        </div>
         <div class="torches">
           <div class="torch"><div class="flame"></div><div class="stick"></div></div>
           <span class="torch-label">usually reply within a day</span>
@@ -462,6 +473,15 @@
       <span style="font-size:5px;opacity:0.5">no creepers were harmed</span>
     </div>
   </footer>
+
+  <div class="walker" id="walker">
+    <div class="walker-char">
+      <div class="w-comb"></div>
+      <div class="w-head"></div>
+      <div class="w-body"></div>
+      <div class="w-legs"></div>
+    </div>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 
