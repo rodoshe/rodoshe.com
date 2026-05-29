@@ -1,0 +1,92 @@
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  padding: 14px 20px;
+  transition: transform 0.1s, border-color 0.1s;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.contact-link:hover { transform: translateY(-3px); }
+.contact-link.email:hover    { border-color: var(--redstone); }
+.contact-link.github:hover   { border-color: var(--lavender); }
+.contact-link.linkedin:hover { border-color: #5b9bd5; }
+
+.contact-link span { font-size: 20px; }
+
+.torches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.torch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flame {
+  width: 9px; height: 12px;
+  background: var(--gold);
+  position: relative;
+  animation: flicker 0.35s ease-in-out infinite alternate;
+}
+
+.flame::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #ff8800;
+}
+
+@keyframes flicker {
+  from { transform: skewX(-4deg) scaleY(1);   opacity: 0.9; }
+  to   { transform: skewX(4deg)  scaleY(1.1); opacity: 1; }
+}
+
+.stick {
+  width: 5px; height: 18px;
+  background: var(--wood);
+  border: 2px solid var(--wood-dk);
+}
+
+.torch-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  .contact-sub {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+}
+.contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  padding: 14px 20px;
+  transition: transform 0.1s, border-color 0.1s;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+}

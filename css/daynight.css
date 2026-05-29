@@ -1,0 +1,67 @@
+.day-night-toggle {
+  background: none;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: border-color 0.2s;
+}
+
+.day-night-toggle:hover { border-color: var(--gold); }
+
+body.night .sky {
+  background: linear-gradient(180deg, #0a0a2e, #1a1a4e);
+}
+
+body.night .cloud div {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+body.night .ground {
+  background: var(--grass);
+  filter: brightness(0.5);
+}
+
+body.night nav {
+  background: #1a1208;
+  border-bottom-color: #0a0a00;
+}
+
+body.night .hero-card {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+body.night main {
+  background: linear-gradient(180deg, #2a1800, #120d00);
+}
+
+body.night section.wood  { background: #4a3508; border-color: #2e2005; }
+body.night section.stone { background: #4a4a4a; border-color: #333; }
+body.night section.dirt  { background: #3d2210; border-color: #2a1608; }
+body.night section.sand  { background: #7a6830; border-color: #5a4e22; }
+
+.stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+body.night .stars { opacity: 1; }
+
+.star {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}

@@ -1,0 +1,90 @@
+:root {
+  --sky:      #87CEEB;
+  --grass:    #5D8731;
+  --grass-hi: #7DB53A;
+  --dirt:     #866043;
+  --dirt-dk:  #6B4C30;
+  --stone:    #9E9E9E;
+  --stone-dk: #7A7A7A;
+  --wood:     #8B6914;
+  --wood-dk:  #6B4F12;
+  --sand:     #E8D48B;
+  --gold:     #F5C542;
+  --diamond:  #4DE8E8;
+  --redstone: #FF4444;
+  --pink:     #FFB7C5;
+  --lavender: #C9AAFF;
+  --cream:    #FFF9F0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background: var(--sky);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #87CEEB, #c9e8f7);
+  z-index: -1;
+}
+
+.cloud {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  animation: drift linear infinite;
+}
+
+.cloud-1 { top: 8%;  animation-duration: 65s; animation-delay: -15s; }
+.cloud-2 { top: 18%; animation-duration: 85s; animation-delay: -50s; }
+.cloud-3 { top: 4%;  animation-duration: 75s; animation-delay: -30s; }
+
+.cloud div {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes drift {
+  from { transform: translateX(-250px); }
+  to   { transform: translateX(110vw); }
+}
+
+.ground {
+  height: 32px;
+  background: var(--grass-hi);
+  border-bottom: 8px solid var(--grass);
+  position: relative;
+  z-index: 1;
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99;
+  animation: rise linear both;
+}
+
+@keyframes rise {
+  from { transform: translateY(0) rotate(0deg);   opacity: 1; }
+  to   { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+@media (max-width: 650px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .tl-header  { flex-direction: column; }
+  nav a       { font-size: 6px; padding: 12px 7px; }
+  .hero-card  { padding: 24px 20px; }
+  section     { padding: 24px 16px; }
+}

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subat Rodoshe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/toolbox.css">
+  <link rel="stylesheet" href="css/resume.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/daynight.css">
+  <link rel="stylesheet" href="css/walker.css">
+</head>
+<div class="walker" id="walker">
+  <div class="walker-char">
+    <div class="w-comb"></div>
+    <div class="w-head"></div>
+    <div class="w-body"></div>
+    <div class="w-legs"></div>
+  </div>
+</div>
+<body>
+
+  <div class="sky"></div>
+
+  <div class="cloud cloud-1">
+    <div style="width:80px;height:24px;top:16px;left:0"></div>
+    <div style="width:48px;height:28px;top:0;left:18px"></div>
+    <div style="width:36px;height:22px;top:6px;left:54px"></div>
+  </div>
+  <div class="cloud cloud-2">
+    <div style="width:96px;height:28px;top:20px;left:0"></div>
+    <div style="width:56px;height:30px;top:0;left:22px"></div>
+    <div style="width:44px;height:22px;top:10px;left:66px"></div>
+  </div>
+  <div class="cloud cloud-3">
+    <div style="width:60px;height:20px;top:14px;left:0"></div>
+    <div style="width:38px;height:22px;top:0;left:14px"></div>
+  </div>
+
+  <nav>
+    <div class="nav-logo">✦ <em>Subat Rodoshe</em></div>
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#education">EDUCATION</a>
+    <a href="#jobs">JOBS</a>
+    <a href="#toolbox">SKILLS</a>
+    <a href="#contact">CONTACT</a>
+    <a href="#resume" class="nav-resume">📄 RESUME</a>
+    <button class="day-night-toggle" id="dayNightToggle" title="Toggle dark mode">🌙 DARK MODE</button>
+  </nav>
+  <section class="hero" id="home">
+    <div class="hero-card">
+      <div class="character">
+        <div class="char-hair-back"></div>
+        <div class="char-hair-front-left"></div>
+        <div class="char-hair-front-right"></div>
+        <div class="char-head"></div>
+        <div class="char-body"></div>
+      </div>
+      <div class="hero-name">Subat Rodoshe</div>
+      <div class="hero-sub">CS Grad based in NYC</div>
+      <div id="typewriter">&nbsp;</div>
+      <div class="xp-bar"><div class="xp-fill"></div></div>
+      <div class="xp-label">level 22</div>
+    </div>
+  </section>
+
+  <div class="ground"></div>
+
+  <main>
+    <div class="container">
+
+      <section class="wood" id="about">
+        <div class="section-heading"><div class="ico">🌿</div>ABOUT ME</div>
+        <div class="about-grid">
+
+          <div class="player-card">
+            <div class="item-frame">
+              <img src="subat.jpg.png" alt="Subat Rodoshe" class="player-photo">
+              <div class="frame-peg"></div>
+            </div>
+            <div class="player-info">
+              <div class="player-name">Subat Rodoshe</div>
+              <div class="player-status">Open to Work</div>
+              <div class="player-tags">
+                <span class="ptag pink">NYC</span>
+                <span class="ptag teal">CS Grad</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; gap: 24px; align-items: flex-start;">
+              <p class="about-text">
+                Hi, I'm Subat! I like building things that solve problems.
+                I'm 22 years old, and I've recently graduated with a degree in Computer Science. I love working on all kinds of projects and trying my absolute best into what I put out.
+                <br><br>
+                Outside of coding, I love gaming, watching anime, traveling, and crocheting.
+              </p>
+
+              <div class="item-frame-gallery">
+                <div class="frame-inner-gallery">
+                  <img class="gallery-slide active" src="graduation.jpg" alt="Graduation">
+                  <img class="gallery-slide" src="honors.png" alt="SJU Honors Ceremony">
+                  <img class="gallery-slide" src="bahamas.jpg" alt="Traveling">
+                  <img class="gallery-slide" src="gaming.png" alt="Gaming">
+                </div>
+                <div class="frame-peg"></div>
+                <div class="frame-caption" id="gallery-cap">Graduation</div>
+                <div class="gallery-dots" id="gallery-dots"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="stone" id="projects">
+        <div class="section-heading"><div class="ico">⚒️</div> PROJECTS</div>
+        <div class="projects-grid">
+
+          <div class="project-wrap">
+            <a class="project" href="https://github.com/rodoshe/deadlockdrop" target="_blank" data-burst>
+              <span class="project-arrow">↗</span>
+              <span class="project-emoji">🎮</span>
+              <div class="project-title">Deadlock Drop</div>
+              <div class="project-desc">
+                Full-stack web app for the Deadlock gaming community. 
+                <li> Players submit feature requests, vote on what they care about, and watch ideas move through a kanban roadmap from concept to actually added.
+              </div>
+              <div class="tags">
+                <span class="tag n">Flask</span>
+                <span class="tag c">PostgreSQL</span>
+                <span class="tag g">CSS</span>
+                <span class="tag p">Python</span>
+                <span class="tag v">Render</span>
+                <span class="tag n">HTML</span>
+              </div>
+            </a>
+            <a href="https://deadlockdrop.com" target="_blank" class="site-link">
+              🌐 deadlockdrop.com
+            </a>
+          </div>
+
+          <a class="project" href="https://github.com/Kenny40306/CUS1166-Software-Engineering" target="_blank" data-burst>
+            <span class="project-arrow">↗</span>
+            <span class="project-emoji">✈️</span>
+            <div class="project-title">VCRTS</div>
+            <div class="project-desc">
+              Vehicular Cloud Real-Time System: Team Capstone
+              <li>Simulates a cloud computing environment where airport-parked vehicles are rented out as computing resources.
+              <li>Clients submit jobs processed in real time with FIFO scheduling, checkpointing, and a live admin dashboard.
+            </div>
+            <div class="tags">
+              <span class="tag n">Java</span>
+              <span class="tag c">Swing GUI</span>
+              <span class="tag g">Sockets</span>
+              <span class="tag p">Multithreading</span>
+              <span class="tag v">MySQL</span>
+            </div>
+          </a>
+
+          <a class="project" href="https://github.com/rodoshe/tutoring-board" target="_blank" data-burst>
+            <span class="project-arrow">↗</span>
+            <span class="project-emoji">📋</span>
+            <div class="project-title">Tutoring Board</div>
+            <div class="project-desc">
+              <li>Jira-inspired kanban board for managing tutoring work, sessions, follow-ups,
+              admin tasks all in one place.
+              <li>Drag and drop, priority filters, search, due dates with overdue indicators, dark mode, and confetti when you finish something!
+            </div>
+            <div class="tags">
+              <span class="tag p">React</span>
+              <span class="tag g">JavaScript</span>
+            </div>
+          </a>
+
+          <a class="project" href="https://github.com/an16rea/CUS1150-Group3" target="_blank" data-burst>
+            <span class="project-arrow">↗</span>
+            <span class="project-emoji">🐧</span>
+            <div class="project-title">Linux To-do List</div>
+            <div class="project-desc">
+              Command-line to-do list app built in C, running on Ubuntu. Supports priorities,
+              timestamps, deadlines, multiple lists, and auto-escalates tasks to high priority
+              the day before they're due.
+            </div>
+            <div class="tags">
+              <span class="tag n">C</span>
+              <span class="tag c">Linux</span>
+              <span class="tag g">Ubuntu</span>
+              <span class="tag p">CLI</span>
+            </div>
+          </a>
+
+          <div class="project-wrap">
+            <a class="project" href="https://github.com/rodoshe/portfolio" target="_blank" data-burst>
+              <span class="project-arrow">↗</span>
+              <span class="project-emoji">🌸</span>
+              <div class="project-title">This Website</div>
+              <div class="project-desc">
+                My personal portfolio which is Minecraft-themed, coded in HTML, CSS, and JavaScript.
+              </div>
+              <div class="tags">
+                <span class="tag n">HTML</span>
+                <span class="tag c">CSS</span>
+                <span class="tag g">JavaScript</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="dirt" id="education">
+        <div class="section-heading"><div class="ico">📚</div> EDUCATION</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-title">B.S. Computer Science</div>
+            <div class="tl-sub">🏛️ St. John's University</div>
+            <div class="tl-date">2022 - 2026</div>
+            <div class="tl-body">Graduated with honors!</div>
+            <div class="tags" style="margin-top:10px">
+              <span class="tag n">Dean's List</span>
+              <span class="tag g">Honors Program</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-title">High School Diploma</div>
+            <div class="tl-sub">🏛️ The Bronx High School of Science</div>
+            <div class="tl-date">2018 – 2022</div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="wood" id="coursework">
+        <div class="section-heading"><div class="ico">📖</div> COURSEWORK</div>
+        <div class="toolbox">
+          <div class="tool-cat">
+            <div class="tool-cat-label">Core CS</div>
+            <div class="tool-item">Computer Programming I & II</div>
+            <div class="tool-item">Data Structures & Algorithms</div>
+            <div class="tool-item">Software Design Methods</div>
+            <div class="tool-item">Theory of Programming</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Systems</div>
+            <div class="tool-item">Computer Architecture</div>
+            <div class="tool-item">Operating Systems</div>
+            <div class="tool-item">Networking</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Data & Security</div>
+            <div class="tool-item">Database Management Systems</div>
+            <div class="tool-item">Data Security & Cryptography</div>
+            <div class="tool-item">Discrete Mathematics</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark" id="jobs">
+        <div class="section-heading"><div class="ico">💼</div> EXPERIENCE</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-header">
+              <div>
+                <div class="tl-title">Branch Manager</div>
+                <div class="tl-sub">Khan's Tutorial</div>
+              </div>
+              <div class="tl-location">Jan 2024 – Apr 2026<br>New York, NY</div>
+            </div>
+            <ul class="tl-bullets">
+              <li>Owned full lifecycle of tutoring service delivery — acquisition, onboarding, scheduling, and retention</li>
+              <li>Personally generated $200K+ in revenue</li>
+              <li>Built and maintained operational workflows using Pipedrive, Stripe, and MemberSpace</li>
+              <li>Tracked core metrics (conversion rate, enrollment volume, retention, revenue per client) to improve scalability</li>
+            </ul>
+            <div class="tags" style="margin-top:12px">
+              <span class="tag n">Project Management</span>
+              <span class="tag g">Stripe</span>
+              <span class="tag p">MemberSpace</span>
+              <span class="tag c">Pipedrive</span>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-header">
+              <div>
+                <div class="tl-title">SHSAT Instructor</div>
+                <div class="tl-sub">Khan's Tutorial</div>
+              </div>
+              <div class="tl-location">Oct 2022 – Nov 2023<br>New York, NY</div>
+            </div>
+            <ul class="tl-bullets">
+              <li>Led structured SHSAT program delivery across multiple student cohorts</li>
+              <li>Managed communication between parents and instructors to align on student progress and outcomes</li>
+            </ul>
+            <div class="tags" style="margin-top:12px">
+              <span class="tag v">Teaching</span>
+              <span class="tag g">Curriculum</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="wood" id="toolbox">
+        <div class="section-heading"><div class="ico">⭐</div> TOOLS</div>
+        <div class="toolbox">
+          <div class="tool-cat">
+            <div class="tool-cat-label">Languages</div>
+            <div class="tool-item">JavaScript / TypeScript</div>
+            <div class="tool-item">Python</div>
+            <div class="tool-item">Java</div>
+            <div class="tool-item">SQL</div>
+            <div class="tool-item">C</div>
+            <div class="tool-item">CSS</div>
+            <div class="tool-item">HTML</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Frameworks</div>
+            <div class="tool-item">React</div>
+            <div class="tool-item">Flask</div>
+            <div class="tool-item">Node.js</div>
+            <div class="tool-item">Jinja2</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Databases</div>
+            <div class="tool-item">PostgreSQL</div>
+            <div class="tool-item">MySQL</div>
+            <div class="tool-item">Supabase</div>
+            <div class="tool-item">Render</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Other</div>
+            <div class="tool-item">Git / GitHub</div>
+            <div class="tool-item">Figma</div>
+            <div class="tool-item">Agile / Scrum</div>
+            <div class="tool-item">Pixel Art</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sand" id="resume">
+        <div class="section-heading"><div class="ico">📄</div> RESUME</div>
+        <div class="resume-wrap">
+          <div class="chest" data-burst>
+            <div class="chest-flower">
+              <div class="tulip">
+                <div style="display:flex">
+                  <div class="px t-empty"></div>
+                  <div class="px t-main"></div>
+                  <div class="px t-empty"></div>
+                  <div class="px t-main"></div>
+                  <div class="px t-empty"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-dark"></div>
+                  <div class="px t-light"></div>
+                  <div class="px t-dark"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-dark"></div>
+                  <div class="px t-main"></div>
+                  <div class="px t-dark"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-empty"></div>
+                  <div class="px t-dark"></div>
+                  <div class="px t-empty"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-empty"></div>
+                  <div class="px t-stem"></div>
+                  <div class="px t-empty"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-leaf"></div>
+                  <div class="px t-stem"></div>
+                  <div class="px t-empty"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-empty"></div>
+                  <div class="px t-stem"></div>
+                  <div class="px t-leaf"></div>
+                </div>
+                <div style="display:flex">
+                  <div class="px t-empty"></div>
+                  <div class="px t-stem"></div>
+                  <div class="px t-empty"></div>
+                </div>
+              </div>
+            </div>
+            <div class="chest-lid"></div>
+            <div class="chest-body"></div>
+          </div>
+          <br>
+          <a class="btn-download" href="subat-rodoshe-resume.pdf" download data-burst>⬇ Download Resume</a>
+          <div class="resume-hint">hover the chest for a surpise :)</div>
+        </div>
+      </section>
+
+      <section class="dark" id="contact">
+        <div class="section-heading"><div class="ico">📬</div> CONTACT</div>
+        <p style="font-family:'VT323',monospace;font-size:22px;color:rgba(255, 255, 255, 0.915);text-align:center;margin-bottom:22px;line-height:1.6">
+          Let's connect! Feel free to reach out about projects, opportunities, or just to chat.
+        </p>
+<div class="contact-links">
+  <a class="contact-link email" href="mailto:subat0412@email.com">
+    <span>📧</span>
+    <div>
+      Email
+      <div class="contact-sub">subat0412@email.com</div>
+    </div>
+  </a>
+  <a class="contact-link github" href="https://github.com/rodoshe" target="_blank">
+    <span>🐙</span>
+    <div>
+      GitHub
+      <div class="contact-sub">See my projects</div>
+    </div>
+  </a>
+  <a class="contact-link linkedin" href="https://linkedin.com/in/subatrodoshe" target="_blank">
+    <span>💼</span>
+    <div>
+      LinkedIn
+      <div class="contact-sub">Connect with me</div>
+    </div>
+  </a>
+</div>
+        <div class="torches">
+          <div class="torch"><div class="flame"></div><div class="stick"></div></div>
+          <span class="torch-label">usually reply within a day</span>
+          <div class="torch"><div class="flame"></div><div class="stick"></div></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="ground"></div>
+
+  <footer>
+    <div class="hearts">
+      <span class="heart">❤</span><span class="heart">❤</span><span class="heart">❤</span>
+      <span class="heart">❤</span><span class="heart">❤</span>
+    </div>
+    <div class="footer-text">
+      thank you! · © 2026 Subat Rodoshe<br>
+      <span style="font-size:5px;opacity:0.5">no creepers were harmed</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

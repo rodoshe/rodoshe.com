@@ -1,0 +1,76 @@
+main {
+  background: linear-gradient(180deg, #7a5500, #5A3D20);
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin: 40px 0;
+  padding: 36px;
+  border: 4px solid transparent;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+  animation: fadeUp 0.4s ease-out both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+section.dirt  { background: var(--dirt);  border-color: var(--dirt-dk); }
+section.stone { background: var(--stone); border-color: var(--stone-dk); color: #1a1a1a; }
+section.wood  { background: var(--wood);  border-color: var(--wood-dk); }
+section.sand  { background: var(--sand);  border-color: #C8A855; color: #1a1a1a; }
+section.dark  { background: rgba(0, 0, 0, 0.55); border-color: rgba(255, 255, 255, 0.15); }
+
+.section-heading {
+  font-size: 15px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.section-heading .ico {
+  width: 40px; height: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+section.stone .section-heading,
+section.sand  .section-heading {
+  color: #1a1a1a;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  font-size: 9px;
+  padding: 4px 9px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.tag.c { border-color: var(--diamond); color: var(--diamond); }
+.tag.g { border-color: var(--gold);    color: var(--gold); }
+.tag.p { border-color: var(--pink);    color: var(--pink); }
+.tag.v { border-color: var(--lavender);color: var(--lavender); }
+.tag.n { border-color: var(--grass-hi);color: var(--grass-hi); }

@@ -1,0 +1,243 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 2.6;
+  color: #ffffff;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 9px;
+  color: var(--grass-hi);
+}
+
+.status::before { content: '● '; }
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-name {
+  font-size: 8px;
+  color: #ffffff;
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.bar {
+  flex: 1;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  position: relative;
+  animation: barIn 1.2s ease-out both;
+}
+
+.bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes barIn { from { width: 0 !important; } }
+
+.b-blue   { background: #4466ff; }
+.b-pink   { background: #ff6688; }
+.b-green  { background: #22bb22; }
+.b-yellow { background: #ccaa00; }
+.b-purple { background: #9955ee; }
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  padding: 18px;
+  width: fit-content;
+}
+
+.item-frame {
+  width: 350px;
+  height: 330px;
+  background: var(--wood);
+  border: 6px solid var(--wood-dk);
+  padding: 10px;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.item-frame::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: -5px;
+  width: 14px; height: 14px;
+  background: #5a3d10;
+}
+
+.item-frame::after {
+  content: '';
+  position: absolute;
+  top: -5px; right: -5px;
+  width: 14px; height: 14px;
+  background: #5a3d10;
+}
+
+.frame-corners-bottom::before {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: -5px;
+  width: 14px; height: 14px;
+  background: #5a3d10;
+}
+
+.player-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #2a2a2a;
+}
+
+.player-info {
+  text-align: center;
+  width: 100%;
+}
+
+.player-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.player-status {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--grass-hi);
+  margin-bottom: 10px;
+}
+
+.player-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ptag {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 4px 7px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--diamond);
+  color: var(--diamond);
+}
+
+.ptag.pink { border-color: var(--pink);     color: var(--pink); }
+.ptag.teal { border-color: var(--grass-hi); color: var(--grass-hi); }
+
+
+.item-frame-gallery {
+  background: var(--wood);
+  border: 5px solid var(--wood-dk);
+  padding: 7px;
+  position: relative;
+  margin-top: 32px;
+  width: 100%;
+  width: 350px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.item-frame-gallery::before {
+  content: '';
+  position: absolute;
+  top: -4px; left: -4px;
+  width: 11px; height: 11px;
+  background: #5a3d10;
+  z-index: 2;
+}
+
+.item-frame-gallery::after {
+  content: '';
+  position: absolute;
+  top: -4px; right: -4px;
+  width: 11px; height: 11px;
+  background: #5a3d10;
+  z-index: 2;
+}
+
+.frame-inner-gallery {
+  border: 3px solid #2a2a2a;
+  background: #1a1a1a;
+  width: 100%;
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.gallery-slide.active { opacity: 1; }
+
+.frame-caption {
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: 4px;
+  min-height: 20px;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.gallery-dot {
+  width: 8px; height: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gallery-dot.active { background: var(--gold); border-color: var(--gold); }
+
+@media (max-width: 650px) {
+  .about-grid { grid-template-columns: 1fr; }
+}

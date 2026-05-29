@@ -1,0 +1,135 @@
+.walker {
+  position: fixed;
+  bottom: 0;
+  left: -60px;
+  z-index: 10;
+  pointer-events: none;
+  animation: walk linear infinite;
+  animation-duration: 18s;
+}
+
+@keyframes walk {
+  from { transform: translateX(-60px); }
+  to   { transform: translateX(110vw); }
+}
+
+.walker-char {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  image-rendering: pixelated;
+  animation: bob 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes bob {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-2px); }
+}
+
+/* comb */
+.w-comb {
+  width: 4px;
+  height: 4px;
+  background: #cc0000;
+  align-self: flex-end;
+  margin-right: 2px;
+  box-shadow: -4px 0 0 #cc0000, -4px -4px 0 #cc0000;
+}
+
+/* head */
+.w-head {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 0px;
+  position: relative;
+  image-rendering: pixelated;
+}
+
+/* pixel eye */
+.w-head::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  width: 4px;
+  height: 4px;
+  background: #cc0000;
+}
+
+/* pixel beak */
+.w-head::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  right: -4px;
+  width: 4px;
+  height: 4px;
+  background: #ffaa00;
+}
+
+/* body */
+.w-body {
+  width: 20px;
+  height: 16px;
+  background: #ffffff;
+  position: relative;
+}
+
+/* wing shading */
+.w-body::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 10px;
+  background: #dddddd;
+  animation: wing 0.3s ease-in-out infinite alternate;
+}
+
+/* tail */
+.w-body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+}
+
+@keyframes wing {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(2px); }
+}
+
+/* legs */
+.w-legs {
+  display: flex;
+  gap: 6px;
+  height: 8px;
+}
+
+.w-legs::before,
+.w-legs::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: #ffaa00;
+  animation: legL 0.3s ease-in-out infinite alternate;
+}
+
+.w-legs::after {
+  animation: legR 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes legL {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-3px); }
+}
+
+@keyframes legR {
+  from { transform: translateY(-3px); }
+  to   { transform: translateY(0); }
+}
