@@ -1,16 +1,10 @@
 .walker {
   position: fixed;
   bottom: 0;
-  left: -60px;
+  left: 0;
   z-index: 10;
   pointer-events: none;
-  animation: walk linear infinite;
-  animation-duration: 18s;
-}
-
-@keyframes walk {
-  from { transform: translateX(-60px); }
-  to   { transform: translateX(110vw); }
+  will-change: transform;
 }
 
 .walker-char {
@@ -26,7 +20,6 @@
   to   { transform: translateY(-2px); }
 }
 
-/* comb */
 .w-comb {
   width: 4px;
   height: 4px;
@@ -36,28 +29,24 @@
   box-shadow: -4px 0 0 #cc0000, -4px -4px 0 #cc0000;
 }
 
-/* head */
 .w-head {
   width: 16px;
   height: 16px;
   background: #ffffff;
-  border: 0px;
   position: relative;
   image-rendering: pixelated;
 }
 
-/* pixel eye */
 .w-head::before {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 3px;
   right: 2px;
   width: 4px;
   height: 4px;
   background: #cc0000;
 }
 
-/* pixel beak */
 .w-head::after {
   content: '';
   position: absolute;
@@ -68,7 +57,6 @@
   background: #ffaa00;
 }
 
-/* body */
 .w-body {
   width: 20px;
   height: 16px;
@@ -76,7 +64,6 @@
   position: relative;
 }
 
-/* wing shading */
 .w-body::before {
   content: '';
   position: absolute;
@@ -86,9 +73,9 @@
   height: 10px;
   background: #dddddd;
   animation: wing 0.3s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-/* tail */
 .w-body::after {
   content: '';
   position: absolute;
@@ -104,7 +91,6 @@
   to   { transform: translateY(2px); }
 }
 
-/* legs */
 .w-legs {
   display: flex;
   gap: 6px;
@@ -118,6 +104,7 @@
   height: 8px;
   background: #ffaa00;
   animation: legL 0.3s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .w-legs::after {
@@ -132,4 +119,8 @@
 @keyframes legR {
   from { transform: translateY(-3px); }
   to   { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .walker { display: none; }
 }

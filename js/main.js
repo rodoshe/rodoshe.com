@@ -67,11 +67,22 @@ document.addEventListener('DOMContentLoaded', () => {
   toggle.addEventListener('click', () => {
     const isNight = document.body.classList.toggle('night');
     toggle.textContent = isNight ? '☀️ LIGHT MODE' : '🌙 DARK MODE';
-  
+  });
+
   const walker = document.getElementById('walker');
-  walker.addEventListener('animationiteration', () => {
-    walker.style.animationDuration = (14 + Math.random() * 8) + 's';
-  });
-  });
+  let walkerX = -60;
+  let walkerSpeed = 1.2;
+
+  function stepWalker() {
+    walkerX += walkerSpeed;
+    if (walkerX > window.innerWidth + 60) {
+      walkerX = -60;
+      walkerSpeed = 0.8 + Math.random() * 0.8;
+    }
+    walker.style.transform = `translateX(${walkerX}px)`;
+    requestAnimationFrame(stepWalker);
+  }
+
+  stepWalker();
 
 });
