@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/daynight.css">
   <link rel="stylesheet" href="css/walker.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
 </head>
 <body>
 
@@ -38,18 +39,31 @@
     <div style="width:38px;height:22px;top:0;left:14px"></div>
   </div>
 
-  <nav>
+  <nav class="top-nav">
     <div class="nav-logo">✦ <em>Subat Rodoshe</em></div>
     <a href="#about">ABOUT</a>
     <a href="#projects">PROJECTS</a>
     <a href="#education">EDUCATION</a>
-    <a href="#jobs">JOBS</a>
+    <a href="#jobs">EXPERIENCE</a>
     <a href="#toolbox">SKILLS</a>
     <a href="#gallery">GALLERY</a>
     <a href="#contact">CONTACT</a>
     <a href="#resume" class="nav-resume">📄 RESUME</a>
     <button class="day-night-toggle" id="dayNightToggle" title="Toggle dark mode">🌙 DARK MODE</button>
   </nav>
+
+  <div class="tab-bar" id="tabBar">
+    <button class="tab-btn" data-target="home"><span class="tab-icon">🏠</span>HOME</button>
+    <button class="tab-btn" data-target="about"><span class="tab-icon">🌿</span>ABOUT</button>
+    <button class="tab-btn" data-target="projects"><span class="tab-icon">⚒️</span>PROJECTS</button>
+    <button class="tab-btn" data-target="education"><span class="tab-icon">📚</span>EDU</button>
+    <button class="tab-btn" data-target="jobs"><span class="tab-icon">💼</span>EXPERIENCE</button>
+    <button class="tab-btn" data-target="toolbox"><span class="tab-icon">⭐</span>SKILLS</button>
+    <button class="tab-btn" data-target="coursework"><span class="tab-icon">📖</span>COURSES</button>
+    <button class="tab-btn" data-target="resume"><span class="tab-icon">📄</span>RESUME</button>
+    <button class="tab-btn" data-target="gallery"><span class="tab-icon">📸</span>GALLERY</button>
+    <button class="tab-btn" data-target="contact"><span class="tab-icon">📬</span>CONTACT</button>
+  </div>
 
   <section class="hero" id="home">
     <div class="hero-card">
@@ -112,7 +126,7 @@
             <div class="br"></div>
             <p class="about-text">
               Hi, I'm Subat! I like building things that solve problems.
-              I'm 22 years old, and I've recently graduated with a degree in Computer Science. I love working on all kinds of projects and trying my absolute best into what I put out.
+              I've recently graduated with a degree in Computer Science, and I love working on all kinds of projects and trying my absolute best into what I put out.
               <br><br>
               Outside of coding, I love gaming, watching anime, traveling, and crocheting.
             </p>
@@ -240,31 +254,6 @@
         </div>
       </section>
 
-      <section class="wood" id="coursework">
-        <div class="section-heading"><div class="ico">📖</div> COURSEWORK</div>
-        <div class="toolbox">
-          <div class="tool-cat">
-            <div class="tool-cat-label">Core CS</div>
-            <div class="tool-item">Computer Programming I & II</div>
-            <div class="tool-item">Data Structures & Algorithms</div>
-            <div class="tool-item">Software Design Methods</div>
-            <div class="tool-item">Theory of Programming</div>
-          </div>
-          <div class="tool-cat">
-            <div class="tool-cat-label">Systems</div>
-            <div class="tool-item">Computer Architecture</div>
-            <div class="tool-item">Operating Systems</div>
-            <div class="tool-item">Networking</div>
-          </div>
-          <div class="tool-cat">
-            <div class="tool-cat-label">Data & Security</div>
-            <div class="tool-item">Database Management Systems</div>
-            <div class="tool-item">Data Security & Cryptography</div>
-            <div class="tool-item">Discrete Mathematics</div>
-          </div>
-        </div>
-      </section>
-
       <section class="dark" id="jobs">
         <div class="section-heading"><div class="ico">💼</div> EXPERIENCE</div>
         <div class="timeline">
@@ -317,34 +306,61 @@
         <div class="toolbox">
           <div class="tool-cat">
             <div class="tool-cat-label">Languages</div>
-            <div class="tool-item">JavaScript / TypeScript</div>
-            <div class="tool-item">Python</div>
-            <div class="tool-item">Java</div>
-            <div class="tool-item">SQL</div>
+            <div class="tool-item">Bash</div>
             <div class="tool-item">C</div>
             <div class="tool-item">CSS</div>
+            <div class="tool-item">Java</div>
+            <div class="tool-item">Python</div>
+            <div class="tool-item">SQL</div>
+            <div class="tool-item">JavaScript</div>
             <div class="tool-item">HTML</div>
           </div>
           <div class="tool-cat">
-            <div class="tool-cat-label">Frameworks</div>
-            <div class="tool-item">React</div>
+            <div class="tool-cat-label">Technologies</div>
             <div class="tool-item">Flask</div>
             <div class="tool-item">Node.js</div>
-            <div class="tool-item">Jinja2</div>
+            <div class="tool-item">React.js</div>
+            <div class="tool-item">REST APIs</div>
+            <div class="tool-item">SQLite</div>
+            <div class="tool-item">Swing</div>
+            <div class="tool-item">Socket Programming</div>
           </div>
           <div class="tool-cat">
-            <div class="tool-cat-label">Databases</div>
-            <div class="tool-item">PostgreSQL</div>
-            <div class="tool-item">MySQL</div>
-            <div class="tool-item">Supabase</div>
-            <div class="tool-item">Render</div>
+            <div class="tool-cat-label">Tools</div>
+            <div class="tool-item">Git</div>
+            <div class="tool-item">Jira</div>
+            <div class="tool-item">Stripe</div>
+            <div class="tool-item">Pipedrive</div>
+            <div class="tool-item">Vercel</div>
+            <div class="tool-item">Linux</div>
+            <div class="tool-item">Excel</div>
+            <div class="tool-item">Google Sheets</div>
+            <div class="tool-item">Word</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wood" id="coursework">
+        <div class="section-heading"><div class="ico">📖</div> COURSEWORK</div>
+        <div class="toolbox">
+          <div class="tool-cat">
+            <div class="tool-cat-label">Core CS</div>
+            <div class="tool-item">Computer Programming I & II</div>
+            <div class="tool-item">Data Structures & Algorithms</div>
+            <div class="tool-item">Software Design Methods</div>
+            <div class="tool-item">Theory of Programming</div>
           </div>
           <div class="tool-cat">
-            <div class="tool-cat-label">Other</div>
-            <div class="tool-item">Git / GitHub</div>
-            <div class="tool-item">Figma</div>
-            <div class="tool-item">Agile / Scrum</div>
-            <div class="tool-item">Pixel Art</div>
+            <div class="tool-cat-label">Systems</div>
+            <div class="tool-item">Computer Architecture</div>
+            <div class="tool-item">Operating Systems</div>
+            <div class="tool-item">Networking</div>
+          </div>
+          <div class="tool-cat">
+            <div class="tool-cat-label">Data & Security</div>
+            <div class="tool-item">Database Management Systems</div>
+            <div class="tool-item">Data Security & Cryptography</div>
+            <div class="tool-item">Discrete Mathematics</div>
           </div>
         </div>
       </section>
@@ -429,11 +445,11 @@
           Let's connect! Feel free to reach out about projects, opportunities, or just to chat.
         </p>
         <div class="contact-links">
-          <a class="contact-link email" href="mailto:subat0412@email.com">
+          <a class="contact-link email" href="mailto:subatrodoshe@gmail.com">
             <span>📧</span>
             <div>
               Email
-              <div class="contact-sub">subat0412@email.com</div>
+              <div class="contact-sub">subatrodoshe@gmail.com</div>
             </div>
           </a>
           <a class="contact-link github" href="https://github.com/rodoshe" target="_blank">

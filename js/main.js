@@ -5,8 +5,7 @@ const phrases = [
   'product manager',
   'software engineer',
   'data analyst',
-  'project manager',
-  'gamer'
+  'project manager'
 ];
 
 const typewriter = new Typewriter('#typewriter', phrases);
@@ -84,5 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   stepWalker();
+
+  const tabBar = document.getElementById('tabBar');
+  if (tabBar) {
+    const panels = document.querySelectorAll('#home, main section[id]');
+    const tabs   = tabBar.querySelectorAll('.tab-btn');
+
+    function showPanel(id) {
+      panels.forEach(p => p.classList.toggle('active-panel', p.id === id));
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.target === id));
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        showPanel(tab.dataset.target);
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        window.scrollTo(0, 0);
+      });
+    });
+
+    showPanel('home');
+  }
 
 });

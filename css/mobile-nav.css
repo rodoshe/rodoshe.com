@@ -1,0 +1,80 @@
+.tab-bar { display: none; }
+
+@media (max-width: 768px) {
+
+  nav.top-nav { display: none; }
+
+  body { padding-bottom: 60px; }
+
+  .cloud,
+  .ground,
+  footer {
+    display: none;
+  }
+
+  main { padding-bottom: 0; }
+
+  .hero,
+  main section {
+    display: none;
+  }
+
+  .hero.active-panel {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 24px;
+    animation: panelFadeIn 0.3s ease both;
+  }
+
+  main section.active-panel {
+    display: block;
+    min-height: calc(100vh - 60px);
+    margin: 0;
+    animation: panelFadeIn 0.3s ease both;
+  }
+
+  @keyframes panelFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .resume-hint { display: none; }
+
+  .tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 60;
+    background: var(--dirt);
+    border-top: 5px solid var(--dirt-dk);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tab-bar::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 14px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .tab-btn .tab-icon { font-size: 16px; }
+
+  .tab-btn.active {
+    color: #ffffff;
+    background: var(--grass);
+  }
+}
