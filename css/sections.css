@@ -1,5 +1,5 @@
 main {
-  background: linear-gradient(180deg, #7a5500, #5A3D20);
+  background: linear-gradient(180deg, hsl(43, 95%, 15%), #5A3D20);
   padding-bottom: 60px;
   position: relative;
   z-index: 1;

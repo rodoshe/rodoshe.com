@@ -40,6 +40,8 @@
 
   .resume-hint { display: none; }
 
+  .heart-float { display: none; }
+  
   .tab-bar {
     display: flex;
     position: fixed;
@@ -66,7 +68,7 @@
     border: none;
     color: rgba(255, 255, 255, 0.65);
     font-family: 'Press Start 2P', monospace;
-    font-size: 6px;
+    font-size: 8px;
     white-space: nowrap;
     cursor: pointer;
   }
